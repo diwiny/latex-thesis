@@ -1,0 +1,71 @@
+% !TeX spellcheck = hu_HU
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+\documentclass[12pt,a4paper,oneside]{report}             % Single-side
+
+\input{include/packages}
+
+\newcommand{\vikszerzoVezeteknev}{Példa}
+\newcommand{\vikszerzoKeresztnev}{Jóska}
+
+\newcommand{\vikkonzulensAMegszolitas}{Dr.~}
+\newcommand{\vikkonzulensAVezeteknev}{Jeszenszky}
+\newcommand{\vikkonzulensAKeresztnev}{Péter}
+
+\newcommand{\vikkonzulensBMegszolitas}{}
+\newcommand{\vikkonzulensBVezeteknev}{}
+\newcommand{\vikkonzulensBKeresztnev}{}
+
+\newcommand{\vikkonzulensCMegszolitas}{}
+\newcommand{\vikkonzulensCVezeteknev}{}
+\newcommand{\vikkonzulensCKeresztnev}{}
+
+\newcommand{\vikcim}{HAAHHAHAHAHHA} % Cím
+\newcommand{\viktanszek}{\unidebik}
+\newcommand{\vikdoktipus}{\bsc}
+\newcommand{\vikmunkatipusat}{szakdolgozatot}
+
+\newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev}
+
+\input{include/thesis-hu}
+
+\input{include/preamble}
+
+%--------------------------------------------------------------------------------------
+% Table of contents and the main text
+%--------------------------------------------------------------------------------------
+\begin{document}
+
+
+\selectthesislanguage
+
+%TODO Titlepage -- choose one from below
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\include{include/titlepage}
+
+% Table of Contents
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\tableofcontents\vfill
+
+
+
+% The main part of the thesis
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\pagenumbering{arabic}
+
+\include{content/introduction}
+
+% List of Figures, Tables
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}
+%\listoftables\addcontentsline{toc}{chapter}{\listtablename}
+
+
+% Bibliography
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\addcontentsline{toc}{chapter}{\bibname}
+%\bibliography{bib/mybib}
+\printbibliography[title={Irodalomjegyzék}]
+
+%\label{page:last}
+\end{document}
